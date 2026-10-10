@@ -10,7 +10,7 @@ A real-time Hardware-in-the-Loop (HIL) system that integrates an ESP32 microcont
 
 ## 🛠️ Hardware Requirements
 * ESP32 Development Board
-* Servomotor (e.g., SG90 or MG995)
+* Servomotor 
 * Jumper wires & Breadboard
 * USB Cable for serial communication and power
 
