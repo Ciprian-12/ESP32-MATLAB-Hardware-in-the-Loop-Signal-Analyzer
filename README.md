@@ -1,25 +1,28 @@
-# ESP32-MATLAB-Hardware-in-the-Loop-Signal-Analyzer
+# ESP32-MATLAB Hardware-in-the-Loop (HIL) Signal Analyzer
 
+A real-time Hardware-in-the-Loop (HIL) system that integrates an ESP32 microcontroller with MATLAB. This project performs digital waveform generation, Fast Fourier Transform (FFT) analysis, and synchronized physical actuation using a servomotor.
 
-## 📖 Project Description 
-## This project implements a Hardware-in-the-Loop (HIL) testing architecture, combining the versatility of an ESP32 microcontroller with the computational power (DSP) of MATLAB. The system operates simultaneously as a digital function generator, a mechanical actuator controller, and a real-time spectral analyzer.
+## 📌 Key Features
+* **Real-time Signal Processing:** Digital waveform generation and FFT analysis executed in MATLAB.
+* **Hardware-in-the-Loop:** Seamless synchronization between MATLAB mathematical models and ESP32 physical outputs.
+* **Safety Constraints:** Mathematical signals mapped to PWM outputs are strictly constrained within a safe **0.16V – 3.06V** operational limit to protect the physical actuator.
+* **Robust Communication:** Bidirectional serial communication established at **115200 baud** rate, maintaining a stable **200 Hz** sampling frequency for accurate and continuous data streaming.
 
-## Unlike a standard passive measurement instrument, this system mathematically generates complex waveforms (sine, square, triangle), translates them instantly into physical motion via a servomotor, and transmits the raw data to the PC. MATLAB captures this continuous data stream to render a dynamic graphical interface and decompose the signals in the frequency domain using the Fast Fourier Transform (FFT).
+## 🛠️ Hardware Requirements
+* ESP32 Development Board
+* Servomotor (e.g., SG90 or MG995)
+* Jumper wires & Breadboard
+* USB Cable for serial communication and power
 
+## 💻 Software Requirements
+* **MATLAB** (with basic signal processing capabilities)
+* **Arduino IDE** or **PlatformIO** for flashing the ESP32
+* ESP32 Board Package installed in your IDE
 
-## 🚀 Key Features
-## Direct Digital Synthesis (DDS): Precise waveform generation using the processor's internal clock and the ESP32's 12-bit resolution, translated into a safe operational range of 0.16V – 3.06V to protect the mechanical actuator.
-
-## Advanced Spectral Analysis: Raw data processing in MATLAB (using a 1000-point buffer) to isolate the fundamental frequency and odd harmonics, practically demonstrating Fourier's Theorem.
-
-## Mechanical Synchronization (PWM): Mathematical mapping of the waveform into a physical angle (0° - 180°) and driving an MG90S servomotor via the GPIO 18 pin with minimal latency.
-
-## Bidirectional Serial Communication: A stable distributed architecture running at 115200 baud, where the microcontroller strictly handles physical timing (microsecond level), while# the PC manages heavy mathematical calculations and dynamic UI rendering.
-
-
-## 🛠️ Technologies Used
-## Hardware: ESP32 DevKit V1, Servomotor (MG90S/SG90), Breadboard (Point-to-Point routing)
-
-## Software: C++ (Arduino IDE) for control logic, MATLAB for signal processing and GUI
-
-## Concepts: HIL, DSP, FFT, PWM, Nyquist-Shannon Sampling Theorem
+## 📂 Project Structure
+```text
+📦 ESP32-MATLAB-Hardware-in-the-Loop-Signal-Analyzer
+ ┣ 📂 ESP32_Firmware      # C++ code for the ESP32 microcontroller
+ ┣ 📂 MATLAB_Scripts      # MATLAB scripts for signal generation and FFT
+ ┣ 📂 Hardware_Schematics # Wiring diagrams and circuit schematics
+ ┗ 📜 README.md
