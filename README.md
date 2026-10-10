@@ -32,11 +32,16 @@ The custom "ServoScope Pro" interface allows real-time control and visualization
 ### Triangle Wave Analysis
 ![Triangle Wave](assets/triangle_wave.jpeg)
 
+### Real-Time Hardware Actuation
+
+To see the real-time synchronization between the MATLAB mathematical models and the physical actuator (ESP32-controlled servomotor), watch the video demonstration below:
+
+🎥 **[Click here to watch the Hardware-in-the-Loop demonstration on YouTube](https://youtu.be/l1q4M21OqTU)**
+
 
 ## 📂 Project Structure
 ```text
 📦 ESP32-MATLAB-Hardware-in-the-Loop-Signal-Analyzer
  ┣ 📂 ESP32_Firmware      # C++ code for the ESP32 microcontroller
  ┣ 📂 MATLAB_Scripts      # MATLAB scripts for signal generation and FFT
- ┣ 📂 Hardware_Schematics # Wiring diagrams and circuit schematics
  ┗ 📜 README.md
