@@ -19,6 +19,20 @@ A real-time Hardware-in-the-Loop (HIL) system that integrates an ESP32 microcont
 * **Arduino IDE** or **PlatformIO** for flashing the ESP32
 * ESP32 Board Package installed in your IDE
 
+## 📊 Results & Demonstration
+
+The custom "ServoScope Pro" interface allows real-time control and visualization of different waveforms, displaying both the time-domain signal and its frequency spectrum (FFT).
+
+### Square Wave Analysis
+![Square Wave](assets/square_wave.jpeg)
+
+### Sine Wave Analysis
+![Sine Wave](assets/sine_wave.jpeg)
+
+### Triangle Wave Analysis
+![Triangle Wave](assets/triangle_wave.jpeg)
+
+
 ## 📂 Project Structure
 ```text
 📦 ESP32-MATLAB-Hardware-in-the-Loop-Signal-Analyzer
